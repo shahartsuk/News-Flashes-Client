@@ -1,6 +1,6 @@
 import axios from "axios";
 
-const EndPoint = "https://localhost:7094/";
+const EndPoint = "https://localhost:7094/"; 
 
 // send BusinessCompany user to server and add to db
 export const GetSubjectsFromServer = async () => {
