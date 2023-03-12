@@ -7,3 +7,9 @@
   background-color: rgb(110, 107, 107);
   margin: 0px;
 }
+
+.Bg-Image{
+  background-image: url("./Images/Japan-2107x1406.jpg");
+  background-size: cover;
+  background-repeat: no-repeat;
+}

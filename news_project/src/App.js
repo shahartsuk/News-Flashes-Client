@@ -19,8 +19,10 @@ function App() {
         </div>
       );
     } else {
-      return(<div>
+      return(<div >
+      <div >
         <LoginButton />
+      </div>
       </div>)
     }
   } else {
