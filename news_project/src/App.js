@@ -1,11 +1,12 @@
 import React from "react";
 import "./App.css";
 import { useAuth0 } from "@auth0/auth0-react";
-import LoginButton from "../src/Auth0/loginButton";
-import Profile from "../src/Auth0/profile";
-import LogoutButton from "../src/Auth0/logOutBtn";
+
+import LoginButton from "../src/Auth/loginButton";
+
 import { PacmanLoader } from "react-spinners";
-import { GetSubjects } from "./Components/getSubjects";
+import { RouteComp } from "./Router/route.component";
+import { PageContainer } from "./Router/pageContainer.component";
 
 function App() {
   const { isAuthenticated, isLoading } = useAuth0();
@@ -13,9 +14,8 @@ function App() {
     if (isAuthenticated) {
       return (
         <div className="App">
-          <Profile/>
-          <LogoutButton />
-          <GetSubjects/>
+          <RouteComp/>
+          <PageContainer/>
         </div>
       );
     } else {

@@ -11,12 +11,12 @@ export const GetSubjects = () => {
   useEffect(() => {
     HandleSubjects();
   }, []);
-
+console.log(Subjects);
   return <div>
     {Subjects.length > 0 && Subjects.map((s)=>{
         return(
         <button className="btn btn-lg btn-primary">
-            {s.Name}
+            {s.name}
         </button>
         )
     })}
