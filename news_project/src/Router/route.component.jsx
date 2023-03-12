@@ -1,7 +1,7 @@
 import React from 'react'
 import { Routes, Route } from "react-router-dom";
 import Profile from '../Auth/profile';
-import { GetSubjects } from '../Components/getSubjects';
+import { GetSubjects } from '../Components/Subjects/getSubjects';
 import { NotFoundPage } from '../Components/notFound.page';
 
 export const RouteComp = () => {
