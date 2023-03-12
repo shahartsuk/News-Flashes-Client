@@ -14,8 +14,8 @@ function App() {
     if (isAuthenticated) {
       return (
         <div className="App">
-          <RouteComp/>
           <PageContainer/>
+          <RouteComp/>
         </div>
       );
     } else {

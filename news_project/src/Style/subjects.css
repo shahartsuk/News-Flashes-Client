@@ -1,0 +1,10 @@
+.subjects-container{
+    display: grid;
+    grid-template-columns: 3fr 3fr 3fr 3fr 3fr;
+    grid-gap: 1em;
+    margin-top: 1em;
+}
+
+.btn-subject-size{
+    width: fit-content;
+}

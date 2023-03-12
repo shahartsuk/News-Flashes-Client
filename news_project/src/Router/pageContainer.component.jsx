@@ -3,14 +3,16 @@ import { Link } from "react-router-dom";
 
 import LogoutButton from "../Auth/logOutBtn";
 
-import "../Style/router.less";
+//import "../Style/router.less";
+
+import "../Style/router.css"
 
 import HomeIcon from "@mui/icons-material/Home";
 
 export const PageContainer = () => {
   return (
     <div className='page-container'>
-        <ul>
+        <ul className='list-container'>
          <li>
             <Link className="Links" to="/">
               <HomeIcon fontSize="large" className="icons" />

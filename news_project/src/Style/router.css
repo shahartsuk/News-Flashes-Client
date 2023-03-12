@@ -1,0 +1,26 @@
+.page-container {
+  background-color: blue;
+  height: 4em;
+}
+.list-container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    margin-top: 1em;
+}
+.Links {
+  text-decoration: none;
+  font-size: x-large;
+  display: flex;
+  color: white;
+}
+
+.Links:hover {
+  transform: scale(1.2);
+  transition: 1.2s;
+  color: white;
+}
+li {
+  list-style-type: none;
+  margin-bottom: 80px;
+}
