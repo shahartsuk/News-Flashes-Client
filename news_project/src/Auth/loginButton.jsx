@@ -9,7 +9,15 @@ const LoginButton = () => {
   return( 
   
     <div className="firstPage">
-      <FallingStars/>
+      <div className="falling-stars-container1">
+       <FallingStars/>
+      </div>
+      <div className="falling-stars-container2">
+       <FallingStars/>
+      </div>
+      <div className="falling-stars-container3">
+       <FallingStars/>
+      </div>
       <h1>Welcome To My First News Flashes Web</h1>
   <button className="btn btn-primary" onClick={() => loginWithRedirect("http://localhost:3000/")}>Log In</button>
   </div>
