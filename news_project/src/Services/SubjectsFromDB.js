@@ -15,6 +15,7 @@ export const GetSubjectsFromServer = async () => {
 
 //send 3 subjects to db
 export const Choose3Subjects = async (UserDetails) => {
+  console.log("choose:",UserDetails)
   try {
     await axios.post(`${EndPoint}`, UserDetails);
   } catch (error) {

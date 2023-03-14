@@ -1,6 +1,6 @@
 
 import React, { useEffect, useState } from "react";
-import { GetSubjectsFromServer } from "../../Services/SubjectsFromDB";
+import { GetSubjectsFromServer,Choose3Subjects } from "../../Services/SubjectsFromDB";
 
 import "../../Style/subjects.css";
 
@@ -14,9 +14,6 @@ export const GetSubjects = () => {
   const handleSelect = (event) => {
     const value = event.target.value;
     const isChecked = event.target.checked;
-    console.log("value:",value);
-    console.log(isChecked);
-
 
     if (isChecked) {
       //Add checked item into checkList
@@ -27,6 +24,11 @@ export const GetSubjects = () => {
       setCheckedList(filteredList);
     }
   };
+
+  const sendSelectedSubjects= async(Subjects)=>{
+    await Choose3Subjects(Subjects);
+
+  }
   useEffect(() => {
     HandleSubjects();
   }, []);
@@ -50,7 +52,8 @@ export const GetSubjects = () => {
               </div>
           );
         })}
-        <button className="btn btn-secondary" disabled={checkedList.length>3 || checkedList.length<=0 } >Save</button>
+        <button className="btn btn-secondary" disabled={checkedList.length>3 || checkedList.length<=0 } 
+        onClick={()=>sendSelectedSubjects(checkedList)} >Save</button>
         </div>
     </div>
   );
