@@ -14,10 +14,10 @@ export const GetSubjectsFromServer = async () => {
 
 
 //send 3 subjects to db
-export const Choose3Subjects = async (UserDetails) => {
-  console.log("choose:",UserDetails)
+export const Choose3Subjects = async (UserSubjects) => {
+  console.log("choose:",UserSubjects)
   try {
-    await axios.post(`${EndPoint}`, UserDetails);
+    await axios.post(`${EndPoint}`, UserSubjects);
   } catch (error) {
     console.error(error);
   }
