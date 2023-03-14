@@ -17,7 +17,7 @@ export const GetSubjectsFromServer = async () => {
 export const Choose3Subjects = async (UserSubjects) => {
   console.log("choose:",UserSubjects)
   try {
-    await axios.post(`${EndPoint}`, UserSubjects);
+    await axios.post(`${EndPoint}Subjects/GetArticle`, UserSubjects);
   } catch (error) {
     console.error(error);
   }
