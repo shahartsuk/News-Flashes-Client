@@ -1,12 +1,15 @@
-
+import { useAuth0 } from "@auth0/auth0-react";
 import React, { useEffect, useState } from "react";
-import { GetSubjectsFromServer,Choose3Subjects } from "../../Services/SubjectsFromDB";
+import { GetSubjectsFromServer } from "../../Services/SubjectsFromDB";
+import {Choose3Subjects} from "../../Services/UserServices";
 
 import "../../Style/subjects.css";
 
 export const GetSubjects = () => {
   const [Subjects, setSubjects] = useState([]);
   const [checkedList, setCheckedList] = useState([]);
+  const { user } = useAuth0();
+
   const HandleSubjects = async () => {
     let subs = await GetSubjectsFromServer();
     setSubjects(subs);
@@ -26,7 +29,7 @@ export const GetSubjects = () => {
   };
 
   const sendSelectedSubjects= async(Subjects)=>{
-    await Choose3Subjects(Subjects);
+    await Choose3Subjects(Subjects,user.email);
 
   }
   useEffect(() => {
