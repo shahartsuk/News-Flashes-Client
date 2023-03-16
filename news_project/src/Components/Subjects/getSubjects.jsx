@@ -15,7 +15,7 @@ export const GetSubjects = () => {
     setSubjects(subs);
   };
   const handleSelect = (event) => {
-    const value = event.target.value;
+    const value = event.target.id;
     const isChecked = event.target.checked;
 
     if (isChecked) {
@@ -47,6 +47,8 @@ export const GetSubjects = () => {
                   <div key={s.id} className="card-body">
                     <h5 className="card-title">{s.name}</h5>
                     <input
+                      key={s.id}
+                      id={s.id}
                       type="checkbox"
                       value={s.name}
                       onChange={(event)=>handleSelect(event)}

@@ -10,10 +10,10 @@ export const SendUserDetails = async (UserDetails) =>{
     }
 }
 //send 3 subjects to db
-export const Choose3Subjects = async (UserSubjects,email) => {
-    console.log("choose:",UserSubjects)
+export const Choose3Subjects = async (subjects,email) => {
+    console.log("choose:",subjects)
     try {
-      await axios.post(`${EndPoint}subjects/userSubjects/${email}`, UserSubjects);
+      await axios.post(`${EndPoint}users/userSubjects/${email}/${subjects}`);
     } catch (error) {
       console.error(error);
     }
