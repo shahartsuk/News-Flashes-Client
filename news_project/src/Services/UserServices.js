@@ -18,3 +18,15 @@ export const Choose3Subjects = async (subjects,email) => {
       console.error(error);
     }
   };
+
+  export const GetArticleForEachUser = async (email) =>{
+    try {
+      let response = await axios.get(`${EndPoint}users/getArticlesForUser/${email}`);
+      if(response.status === 200)
+      {
+        return response.data;
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  }

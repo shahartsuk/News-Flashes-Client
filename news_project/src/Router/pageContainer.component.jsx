@@ -28,7 +28,7 @@ export const PageContainer = () => {
             </Link>
           </li>
           <li>
-            <Link className="Links" to="/subjects">
+            <Link className="Links" to="/userArticles">
               <ArticleIcon fontSize="large" className="icons" />
               <div className="section-name">Article</div>
             </Link>
