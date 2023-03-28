@@ -1,5 +1,6 @@
 import { useAuth0 } from '@auth0/auth0-react';
 import React,{useEffect, useState} from 'react';
+import { GetArticleForEachUser } from '../../Services/UserServices';
 import { ArticleCard } from './articleCard';
 
 export const ArticlesForeachUser=()=> {
@@ -7,13 +8,11 @@ export const ArticlesForeachUser=()=> {
     const{user} = useAuth0();
 
     const  handleArticles= async()=> {
-     let UserArticles= await GetArticlesForUser(user.email);
+     let UserArticles= await GetArticleForEachUser(user.email);
      setArticles(UserArticles);
     };
 
 useEffect(()=>{handleArticles();},[]);
-
-
 
     return (
         <div>
