@@ -4,7 +4,7 @@ import { GetArticleForEachUser } from '../../Services/UserServices';
 import { ArticleCard } from './articleCard';
 
 export const ArticlesForeachUser=()=> {
-    const[articles,setArticles]=useState();
+    const[articles,setArticles]=useState([]);
     const{user} = useAuth0();
 
     const  handleArticles= async()=> {
@@ -14,14 +14,15 @@ export const ArticlesForeachUser=()=> {
 
 useEffect(()=>{handleArticles();},[]);
 
+console.log("check articles for user", articles);
     return (
         <div>
-            {articles.map(a=>{
+            {articles.length > 0 && articles.map((a)=>{
                 <ArticleCard
-                 Title={a.Title} 
-                 LinkImage={a.LinkImage}
-                  Description={a.Description} 
-                  WebLink={a.WebLink}
+                 Title={a.title} 
+                 LinkImage={a.linkImage}
+                  Description={a.description} 
+                  WebLink={a.webLink}
                    />
             })
 
